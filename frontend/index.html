@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Prince Sharma Chatbot</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Sora:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar" aria-label="Portfolio chatbot header">
+        <a class="brand" href="https://prince-sharma.com/" aria-label="Prince Sharma portfolio">
+          <span class="brand-mark" aria-hidden="true">PS</span>
+          <span class="brand-copy">
+            <span>Prince Sharma</span>
+            <small>AI/ML Engineer</small>
+          </span>
+        </a>
+
+        <div class="status-pill" id="indexStatus">Index ready</div>
+      </header>
+
+      <section class="chat-layout" aria-label="Portfolio chatbot">
+        <aside class="profile-panel" aria-label="Chat context">
+          <p class="eyebrow">Portfolio assistant</p>
+          <h1>Ask Prince's docs.</h1>
+          <p class="lede">
+            Get grounded answers from the indexed resume and source documents.
+          </p>
+
+          <div class="quick-prompts" aria-label="Example questions">
+            <button type="button" data-question="Summarize Prince's profile in two sentences.">
+              Profile summary
+            </button>
+            <button type="button" data-question="What are Prince's main AI and ML skills?">
+              Skills
+            </button>
+            <button type="button" data-question="What experience does Prince have?">
+              Experience
+            </button>
+          </div>
+        </aside>
+
+        <section class="chat-panel" aria-label="Chat conversation">
+          <div class="messages" id="messages" aria-live="polite">
+            <article class="message assistant">
+              <div class="avatar" aria-hidden="true">AI</div>
+              <div class="bubble">
+                <p>Ask me about Prince's experience, projects, skills, or education.</p>
+              </div>
+            </article>
+          </div>
+
+          <form class="composer" id="chatForm">
+            <label class="sr-only" for="questionInput">Question</label>
+            <textarea
+              id="questionInput"
+              name="question"
+              rows="1"
+              placeholder="Ask about Prince's work..."
+              autocomplete="off"
+            ></textarea>
+            <button class="send-button" type="submit" aria-label="Send question">
+              <span>Ask</span>
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M5 12h13" />
+                <path d="m13 6 6 6-6 6" />
+              </svg>
+            </button>
+          </form>
+        </section>
+      </section>
+    </main>
+
+    <script src="/assets/app.js" defer></script>
+  </body>
+</html>
